@@ -32,6 +32,10 @@ jobs:
         working-directory: frontend
         run: npm ci || npm install
 
+      - name: Copy Blockly media assets
+        working-directory: frontend
+        run: mkdir -p public/blockly-media && cp -r node_modules/blockly/media/* public/blockly-media/
+
       - name: Build static site
         working-directory: frontend
         env:
