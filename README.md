@@ -30,27 +30,3 @@ npm run dev
 启动后访问 `http://localhost:5173`。
 
 ---
-
-## 部署到 GitHub Pages（纯静态网页）
-
-项目已内置自动化工作流 [.github/workflows/deploy-pages.yml](.github/workflows/deploy-pages.yml)：
-
-1. 将本仓库推送到 GitHub 的 `main` 分支：
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: initial AlgoBlocks IDE"
-   git branch -M main
-   git remote add origin https://github.com/<你的用户名>/<仓库名>.git
-   git push -u origin main
-   ```
-2. 在 GitHub 仓库页面打开 **Settings → Pages → Build and deployment → Source**，选择 **GitHub Actions**。
-3. 推送后 Actions 会自动构建 `frontend/dist` 并发布至 `https://<你的用户名>.github.io/<仓库名>/`。
-
----
-
-## 项目文档
-
-- [项目进展 (PROGRESS.md)](docs/PROGRESS.md)
-- [开发规范 (CONVENTIONS.md)](docs/CONVENTIONS.md)
-- [系统架构 (ARCHITECTURE.md)](docs/ARCHITECTURE.md)
